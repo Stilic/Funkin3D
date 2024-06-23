@@ -16,19 +16,19 @@ function love.load()
         input = (require "lib.baton").new {
             controls = {
                 -- UI
-                uiLeft =        { "axis:leftx-", "button:dpleft"  },
-                uiRight =       { "axis:leftx+", "button:dpright" },
-                uiUp =          { "axis:lefty-", "button:dpup"    },
-                uiDown =        { "axis:lefty+", "button:dpdown"  },
-                uiConfirm =     { "button:a"    },
-                uiBack =        { "button:b"    },
-                uiErectButton = { "button:back" },
+                uiLeft =        { "key:left", "axis:leftx-", "button:dpleft"  },
+                uiRight =       { "key:right", "axis:leftx+", "button:dpright" },
+                uiUp =          { "key:up", "axis:lefty-", "button:dpup"    },
+                uiDown =        { "key:down", "axis:lefty+", "button:dpdown"  },
+                uiConfirm =     { "key:return", "button:a"    },
+                uiBack =        { "key:backspace", "button:b"    },
+                uiErectButton = { "key:e", "button:back" },
                 
                 -- Gameplay
-                gameLeft =  { "axis:leftx-", "button:dpleft",  "axis:rightx-", "button:x", "axis:triggerleft+"    },
-                gameDown =  { "axis:lefty+", "button:dpdown",  "axis:righty+", "button:y", "button:leftshoulder"  },
-                gameUp =    { "axis:lefty-", "button:dpup",    "axis:righty-", "button:a", "button:rightshoulder" },
-                gameRight = { "axis:leftx+", "button:dpright", "axis:rightx+", "button:b", "axis:triggerright+"   },
+                gameLeft =  { "key:d", "axis:leftx-", "button:dpleft",  "axis:rightx-", "button:x", "axis:triggerleft+"    },
+                gameDown =  { "key:f", "axis:lefty+", "button:dpdown",  "axis:righty+", "button:y", "button:leftshoulder"  },
+                gameUp =    { "key:j", "axis:lefty-", "button:dpup",    "axis:righty-", "button:a", "button:rightshoulder" },
+                gameRight = { "key:k", "axis:leftx+", "button:dpright", "axis:rightx+", "button:b", "axis:triggerright+"   },
             },
             joystick = love.joystick.getJoysticks()[1],
         }
